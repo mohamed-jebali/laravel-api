@@ -23,12 +23,12 @@ class ProjectController extends Controller
     public function show (string $slug){
 
 
-        $projects = Project::with('technologies','type')->findOrFail($slug);
+        $project = Project::with('technologies','type')->findOrFail($slug);
 
         return response()->json(
             [
                 'success'=> true,
-                'results' => $projects,
+                'results' => $project,
             ]
         );
     }
