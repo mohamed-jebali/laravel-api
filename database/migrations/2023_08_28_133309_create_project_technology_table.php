@@ -19,6 +19,9 @@ return new class extends Migration
             $table->foreign('technology_id')->references('id')->on('technologies');
             $table->timestamps();
 
+
+            
+
         });
     }
 
